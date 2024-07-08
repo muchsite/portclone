@@ -4,7 +4,7 @@ import "./App.scss";
 import Home from "./pages/home/Home";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, HashRouter } from "react-router-dom";
 import Footer from "./components/footer/Footer";
 import Contact from "./pages/contac/Contact";
 import About from "./pages/about/About";
@@ -21,7 +21,7 @@ const App = () => {
   return (
     <div className={theme}>
       <main>
-        <BrowserRouter>
+        <HashRouter>
           <Routes>
             <Route element={<Home />} path="/" />
             <Route element={<Contact />} path="/contact" />
@@ -29,7 +29,7 @@ const App = () => {
             <Route element={<Portfolio />} path="/portfolio" />
           </Routes>
           <Footer />
-        </BrowserRouter>
+        </HashRouter>
       </main>
     </div>
   );
