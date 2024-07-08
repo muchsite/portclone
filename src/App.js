@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import React, { useContext, useEffect, useState } from "react";
+import { ThemeContext } from "./ThemeContext";
+import "./App.scss";
+import Home from "./pages/home/Home";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Footer from "./components/footer/Footer";
+import Contact from "./pages/contac/Contact";
+import About from "./pages/about/About";
+import Portfolio from "./pages/portfolio/Portfolio";
+const App = () => {
+  const [theme, setTheme] = useState("dark");
+  const handleTogle = () => {
+    if (theme == "dark") setTheme("light");
+    if (theme == "light") setTheme("dark");
+  };
+  useEffect(() => {
+    Aos.init();
+  }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={theme}>
+      <main>
+        <BrowserRouter>
+          <Routes>
+            <Route element={<Home />} path="/" />
+            <Route element={<Contact />} path="/contact" />
+            <Route element={<About />} path="/about" />
+            <Route element={<Portfolio />} path="/portfolio" />
+          </Routes>
+          <Footer />
+        </BrowserRouter>
+      </main>
     </div>
   );
-}
+};
 
 export default App;
