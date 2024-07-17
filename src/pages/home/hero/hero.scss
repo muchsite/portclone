@@ -1,35 +1,44 @@
+@use "../../../mix.scss" as *;
 .h_c {
   width: 100%;
   overflow: hidden;
   position: relative;
-  background: linear-gradient(
-    180deg,
-    rgba(44, 30, 74, 1) 0%,
-    rgba(0, 0, 0, 1) 57%
-  );
+  background: var(--background-color);
+}
+.hb {
+  position: absolute;
+  object-fit: cover;
+  top: 1rem;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: var(--hb-back);
 }
 .hero_container {
   width: 100%;
   height: 80vh;
-  background-image: url("../../../images/hb.svg");
-  background-position: center;
-  background-size: cover;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 1rem;
   padding: 20px 25px;
+  @include breack_down(large) {
+    height: 70vh;
+  }
   h1 {
-    color: #fff;
+    color: var(--text);
     font-size: 56px;
     font-weight: 800;
     letter-spacing: -2.5px;
     text-align: center;
     span {
-      background: linear-gradient(to right, #fff, var(--g-color));
+      background: linear-gradient(to right, var(--text), var(--g-color));
       -webkit-text-fill-color: transparent;
       -webkit-background-clip: text;
+    }
+    @include breack_down(large) {
+      font-size: 25px;
     }
   }
   p {
@@ -37,6 +46,10 @@
     font-size: 20px;
     text-align: center;
     width: 60%;
+    @include breack_down(large) {
+      font-size: 12px;
+      width: 100%;
+    }
   }
   button {
     background-color: var(--btn);
@@ -53,6 +66,9 @@
 
 .hero_imgages_container {
   // height: 60vh;
+  @include breack_down(large) {
+    display: none;
+  }
   .image_height {
     opacity: 0;
     width: 30vw;
@@ -94,5 +110,23 @@
     .hero_f_5 {
       width: 23vw;
     }
+  }
+}
+.hero_images_mob {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  .h_images_f {
+    width: 25%;
+    height: fit-content;
+  }
+  .h_images_s {
+    width: 40%;
+    margin-top: 2rem;
+  }
+  .h_images_t {
+    width: 20%;
+    height: fit-content;
+    margin-top: 1rem;
   }
 }

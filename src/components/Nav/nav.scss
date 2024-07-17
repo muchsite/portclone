@@ -1,0 +1,48 @@
+.nav_container {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  //   background-color: red;
+  padding: 0.5rem 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: rgba(75, 91, 107, 0.411);
+
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(99, 123, 147, 0.03);
+  .nav_links {
+    display: flex;
+    gap: 1rem;
+    a {
+      text-decoration: none;
+      color: var(--text);
+    }
+    .active {
+      color: var(--btn);
+    }
+    .pending {
+      color: var(--text);
+    }
+  }
+  .theme_btn {
+    background-color: var(--b-back);
+    padding: 0.5rem;
+    border-radius: 10px;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    cursor: pointer;
+    img {
+      transition: 0.4s;
+      width: 100%;
+      filter: invert(42%) sepia(94%) saturate(1565%) hue-rotate(162deg)
+        brightness(96%) contrast(101%);
+    }
+  }
+}
+.w_0 {
+  width: 0 !important;
+}

@@ -1,12 +1,20 @@
+@use "../../../mix.scss" as *;
 .res_container {
   display: flex;
   padding: 5rem 4rem;
   color: var(--text);
   gap: 1rem;
   align-items: center;
+  @include breack_down(large) {
+    flex-direction: column;
+    padding: 2rem;
+  }
   .res_left {
     flex-shrink: 0;
     width: 40vw;
+    @include breack_down(large) {
+      width: 100%;
+    }
     img {
       width: 100%;
     }
@@ -29,6 +37,9 @@
       margin-top: 2rem;
       display: grid;
       grid-template-columns: 1fr 1fr;
+      @include breack_down(large) {
+        grid-template-columns: 1fr;
+      }
       gap: 1rem;
       .res_div {
         display: flex;
@@ -44,6 +55,9 @@
   align-items: center;
   padding: 5rem 4rem;
   gap: 1rem;
+  @include breack_down(large) {
+    padding: 2rem;
+  }
   h2 {
     color: var(--text);
     font-size: 36px;
@@ -57,13 +71,20 @@
     flex-direction: column;
     gap: 2rem;
     margin-top: 2rem;
+
     .choose_divs_f {
       display: flex;
       gap: 2rem;
+      @include breack_down(large) {
+        flex-direction: column;
+      }
     }
     .choose_divs_s {
       display: flex;
       gap: 2rem;
+      @include breack_down(large) {
+        flex-direction: column;
+      }
     }
     .choose_div {
       // width: 50%;
@@ -89,25 +110,40 @@
     }
     .choose_div_1 {
       width: 65%;
+      @include breack_down(large) {
+        width: 100%;
+      }
     }
     .choose_div_2 {
       width: 35%;
+      @include breack_down(large) {
+        width: 100%;
+      }
     }
 
     .choose_div_3 {
       width: 45%;
+      @include breack_down(large) {
+        width: 100%;
+      }
     }
     .choose_div_4 {
       width: 55%;
       flex-direction: column-reverse;
       position: relative;
       overflow: hidden;
+      @include breack_down(large) {
+        width: 100%;
+      }
       img {
         position: relative;
         top: 2rem;
         left: 3rem;
         // height: 20rem;
         width: fit-content;
+        @include breack_down(large) {
+          width: 100%;
+        }
       }
     }
   }

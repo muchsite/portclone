@@ -7,7 +7,7 @@ import Responsive from "./responsive/Responsive";
 import Test from "./test/Test";
 import Faq from "./faq/Faq";
 import Presence from "./presence/Presence";
-
+import "../../mix.scss";
 const Home = () => {
   return (
     <>

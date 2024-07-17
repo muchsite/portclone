@@ -1,3 +1,4 @@
+@use "../../mix.scss" as *;
 .portfolio_hero {
   position: relative;
   width: 100%;
@@ -28,9 +29,15 @@
     align-items: center;
     gap: 1rem;
     display: flex;
+    @include breack_down(large) {
+      width: 90%;
+    }
     h1 {
       font-size: 50px;
       color: var(--text);
+      @include breack_down(large) {
+        font-size: 36px;
+      }
     }
     p {
       font-size: 18px;
@@ -68,22 +75,38 @@
     h2 {
       color: var(--text);
       font-size: 36px;
+      @include breack_down(large) {
+        font-size: 30px;
+        text-align: center;
+      }
     }
     p {
       color: var(--g-color);
       width: 70%;
       text-align: center;
+      @include breack_down(large) {
+        width: 90%;
+      }
     }
   }
   .pre_divs {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 3rem;
+    @include breack_down(large) {
+      flex-direction: column;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
     .pre_div {
       width: 24vw;
       display: flex;
       align-items: flex-start;
       gap: 1rem;
+      @include breack_down(large) {
+        width: 90%;
+      }
       .pre_div_text {
         color: var(--g-color);
         .pre_tiv_title {
@@ -97,9 +120,11 @@
 .highlight {
   display: flex;
   flex-direction: column;
-
   color: #fff;
   margin: 5rem 4rem;
+  @include breack_down(large) {
+    margin: 2rem;
+  }
   .h_title {
     display: flex;
     flex-direction: column;
@@ -112,18 +137,30 @@
     h2 {
       color: var(--text);
       font-size: 36px;
+      @include breack_down(large) {
+        font-size: 30px;
+      }
     }
     p {
       color: var(--g-color);
       width: 70%;
+      @include breack_down(large) {
+        width: 90%;
+      }
     }
   }
   .highlite_body {
     display: flex;
     margin-top: 3rem;
     gap: 2rem;
+    @include breack_down(large) {
+      flex-direction: column;
+    }
     img {
       width: 50%;
+      @include breack_down(large) {
+        width: 90%;
+      }
     }
     .h_left {
       display: flex;
@@ -133,6 +170,9 @@
         display: flex;
         gap: 1rem;
         align-items: flex-start;
+        h3 {
+          color: var(--text);
+        }
         h4 {
           color: var(--g-color);
           outline: 2px solid var(--g-color);
@@ -157,8 +197,14 @@
   }
   .highlite_body_2 {
     flex-direction: row-reverse;
+    @include breack_down(large) {
+      flex-direction: column-reverse;
+    }
     .h2_image {
       border-radius: 20px;
+      @include breack_down(large) {
+        width: 100%;
+      }
     }
   }
 }
@@ -169,11 +215,19 @@
     display: flex;
     justify-content: center;
     gap: 2rem;
+    @include breack_down(large) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
     .colab_div {
       background-color: var(--g-back);
       width: 45%;
       border-radius: 20px;
       overflow: hidden;
+      @include breack_down(large) {
+        width: 90%;
+      }
       .colab_div_text {
         padding: 2rem 1rem;
         h3 {
@@ -203,6 +257,9 @@
       color: var(--text);
       font-size: 55px;
       width: 70%;
+      @include breack_down(large) {
+        font-size: 36px;
+      }
     }
     a {
       background-color: var(--btn);

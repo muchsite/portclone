@@ -1,3 +1,4 @@
+@use "../../../mix.scss" as *;
 .pre_contaner {
   display: flex;
   flex-direction: column;
@@ -8,8 +9,15 @@
   width: 85%;
   background-color: var(--b-back);
   border-radius: 20px;
+  @include breack_down(large) {
+    flex-direction: column;
+    padding: 1rem 0;
+  }
   img {
     width: 60%;
+    @include breack_down(large) {
+      width: 100%;
+    }
   }
   .presence_left {
     display: flex;

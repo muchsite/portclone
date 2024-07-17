@@ -6,11 +6,12 @@ import t from "../../../images/homeF3a.png";
 import fo from "../../../images/homeF3b.png";
 import fi from "../../../images/homeF4.png";
 import si from "../../../images/homeF5.png";
-
+import b from "../../../images/hb.svg";
 const Hero = () => {
   return (
     <div className="h_c">
       <div className="hero_container">
+        <img src={b} alt="" className="hb" />
         <h1 data-aos="fade-up">
           Grow Your Business with User-
           <br /> <span>Friendly, SEO-Optimized Websites</span>
@@ -35,6 +36,11 @@ const Hero = () => {
           <img src={si} alt="" className="hero_f_5" />
         </div>
         <img src={f} alt="hero" className="image_height" />
+      </div>
+      <div className="hero_images_mob">
+        <img src={f} alt="" className="h_images_f" />
+        <img src={s} alt="" className="h_images_s" />
+        <img src={fi} alt="" className="h_images_t" />
       </div>
     </div>
   );

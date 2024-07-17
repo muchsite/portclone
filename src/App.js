@@ -9,6 +9,7 @@ import Footer from "./components/footer/Footer";
 import Contact from "./pages/contac/Contact";
 import About from "./pages/about/About";
 import Portfolio from "./pages/portfolio/Portfolio";
+import Nav from "./components/Nav/Nav";
 const App = () => {
   const [theme, setTheme] = useState("dark");
   const handleTogle = () => {
@@ -22,6 +23,7 @@ const App = () => {
     <div className={theme}>
       <main>
         <HashRouter>
+          <Nav handleTogle={handleTogle} theme={theme} setTheme={setTheme} />
           <Routes>
             <Route element={<Home />} path="/" />
             <Route element={<Contact />} path="/contact" />
