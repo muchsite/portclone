@@ -7,6 +7,7 @@ import fo from "../../../images/typedream-white.svg";
 import th from "../../../images/zapier-white.svg";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { Link } from "react-router-dom";
 const Port = () => {
   useEffect(() => {
     Aos.init();
@@ -23,7 +24,9 @@ const Port = () => {
           online presence with our services. Our portfolio speaks volumes about
           our commitment to excellence.
         </p>
-        <button>Explore Out Portfolio</button>
+        <Link to="/portfolio">
+          <button>Explore Out Portfolio</button>
+        </Link>
       </div>
       <div className="port_r" data-aos="fade-up">
         <img src={f} alt="" />

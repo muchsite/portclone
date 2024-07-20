@@ -1,6 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./contact.scss";
 const Contact = () => {
+  useEffect(() => {
+    const scroll = () => {
+      window.scrollTo(0, 0);
+    };
+    scroll();
+  }, []);
   return (
     <div>
       <div className="contact_text">

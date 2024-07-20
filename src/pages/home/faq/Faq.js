@@ -5,28 +5,68 @@ import minus from "../../../images/minus.svg";
 const Faq = () => {
   const arr = [
     {
-      q: "What services do you offer for website development?",
-      a: "We offer comprehensive website development services including custom design, responsive development, SEO optimization, content creation, and post-launch support.",
+      q: "What is the typical timeline for developing a website?",
+      a: "The timeline for developing a website can vary depending on the complexity and size of the project. On average, a standard business website takes about 6-8 weeks to complete, while more complex sites can take 3-6 months.",
     },
     {
-      q: "How do you tailor solutions for businesses' unique needs?",
-      a: "We tailor our solutions to meet the unique needs of businesses by ensuring a strong online presence and providing a seamless user experience.",
+      q: "What does the web devlopment process look like?",
+      a: "Planning & Design -> content creation & collection -> devlopment & documentation -> Testing -> Deployment & Launch.",
     },
     {
-      q: "What services do you offer for website development?",
-      a: "We tailor our solutions to meet the unique needs of businesses by ensuring a strong online presence and providing a seamless user experience.",
+      q: "How much will it cost to develop a website?",
+      a: "The cost of developing a website depends on various factors such as the number of pages, design complexity, functionality requirements, and additional services like SEO and content creation. We provide a detailed quote after understanding your specific needs.",
     },
     {
-      q: "Do you provide post-launch support?",
-      a: "Yes, we offer post-launch support to assist businesses after their website goes live, ensuring ongoing maintenance and updates.",
+      q: "What information do you need from me to start the project?",
+      a: "We need detailed information about your business, target audience, website goals, desired features and functionalities, branding guidelines, and any existing content you want to use. We will guide you through a requirements gathering process to ensure we have everything we need.",
     },
     {
-      q: "What is your approach to SEO optimization?",
-      a: "Our approach to SEO optimization involves implementing strategies to improve search engine visibility and increase organic traffic to your website.",
+      q: "Can you help me with content creation for my website?",
+      a: "Yes, we offer content creation services, including writing, editing, and optimizing content for SEO. We can also work with any existing content you have and suggest improvements.",
     },
     {
-      q: "How can I get support for my website after it's launched?",
-      a: "You can rely on our team for ongoing support and maintenance post-launch, ensuring your website remains functional and up-to-date.",
+      q: "Will my website be mobile-friendly?",
+      a: "Absolutely. We ensure that all our websites are responsive and provide an optimal viewing experience on desktops, tablets, and mobile devices.",
+    },
+    {
+      q: "Can I see the design before the website goes live?",
+      a: "Yes, we provide design mockups and wireframes for your review and approval before we start the development process. We incorporate your feedback to ensure the final design meets your expectations.",
+    },
+    {
+      q: "What kind of functionalities can you integrate into my website?",
+      a: "We can integrate various functionalities such as contact forms, e-commerce capabilities, booking systems, social media integration, blogs, photo galleries, and more. We tailor the features to match your specific business needs.",
+    },
+    {
+      q: "Can I update the website content myself after it’s built?",
+      a: "Yes, we typically build websites on user-friendly Content Management Systems (CMS), which allows you to easily update content, add new pages, and make other changes without needing technical knowledge.",
+    },
+    {
+      q: "Will my website be optimized for search engines (SEO)?",
+      a: "Yes, we implement basic SEO practices, including keyword optimization, meta tags, and proper URL structures. For more comprehensive SEO services, we offer specialized packages.",
+    },
+    {
+      q: "How do you ensure the website loads quickly?",
+      a: "We optimize images, use efficient coding practices, and leverage caching and content delivery networks (CDNs) to ensure fast loading times. We also conduct performance testing to identify and address any bottlenecks.",
+    },
+    {
+      q: "What happens after the website is launched?",
+      a: "After launch, we provide a period of post-launch support to address any issues that arise. We also offer ongoing maintenance packages to ensure your website remains updated, secure, and performs well.",
+    },
+    {
+      q: " Do you offer website hosting services?",
+      a: "No, There are many hosting service provider with updated securities and custom pricing.",
+    },
+    {
+      q: "How do you handle website security?",
+      a: "We implement security best practices, including SSL certificates, secure coding practices, regular updates, and backups. We also offer advanced security solutions for clients with higher security requirements.",
+    },
+    {
+      q: "Can you redesign my existing website?",
+      a: "Yes, we offer website redesign services. We can revamp your existing site to improve its design, functionality, and performance while retaining your brand identity.",
+    },
+    {
+      q: "What if I need additional features or changes after the website is completed?",
+      a: "We are always here to help with any additional features or changes you need. We can discuss your requirements and provide a quote for the additional work.",
     },
   ];
   const [i, setI] = useState(null);

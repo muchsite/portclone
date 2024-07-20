@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import about from "../../images/about.png";
 import about1 from "../../images/about1";
 import about2 from "../../images/about2";
@@ -16,6 +16,12 @@ const About = () => {
     { img: about5 },
     { img: about6 },
   ];
+  useEffect(() => {
+    const scroll = () => {
+      window.scrollTo(0, 0);
+    };
+    scroll();
+  }, []);
   return (
     <div className="about_container">
       <div className="about_hero_container">

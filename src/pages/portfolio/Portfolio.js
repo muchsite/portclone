@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import por from "../../images/portfolioBack.jpeg";
 import por2 from "../../images/hb.svg";
 import f from "../../images/pre1.svg";
@@ -47,6 +47,12 @@ const Portfolio = () => {
       sp: "Enhance user experience and encourage interaction with intuitive interfaces and user-friendly features.",
     },
   ];
+  useEffect(() => {
+    const scroll = () => {
+      window.scrollTo(0, 0);
+    };
+    scroll();
+  }, []);
   return (
     <div className="portfolio_container">
       <div className="portfolio_hero">

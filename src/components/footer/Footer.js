@@ -8,13 +8,6 @@ const Footer = () => {
       <div className="footer_top">
         <div className="footer_top_left">
           <img src={logo} alt="" />
-          <div className="footer_links">
-            <Link>Product</Link>
-            <Link>Pricing</Link>
-            <Link>Integrations</Link>
-            <Link>Docs</Link>
-            <Link>Contact</Link>
-          </div>
         </div>
         <div className="footer_top_right">
           <h3>About us</h3>
@@ -26,13 +19,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="footer_bottom">
-        <p>© 2023 YourWebSolutions All rights reserved</p>
-        <div className="footer_bottom_links">
-          <Link>Features</Link>
-          <Link>Community</Link>
-          <Link>Privacy Policy</Link>
-          <Link>Terms of service</Link>
-        </div>
+        <p>© 2024 Scared2compile All rights reserved</p>
       </div>
     </div>
   );
