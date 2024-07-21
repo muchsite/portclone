@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portclone/static/css/main.265b7446.css",
-    "main.js": "/portclone/static/js/main.5fb02c32.js",
+    "main.css": "/portclone/static/css/main.14514d49.css",
+    "main.js": "/portclone/static/js/main.40d9b1a7.js",
     "static/media/Kato.jpeg": "/portclone/static/media/Kato.219ae9ec012d564ec1f6.jpeg",
     "static/media/about.png": "/portclone/static/media/about.025a0fd45f08925fda29.png",
     "static/media/choose1.png": "/portclone/static/media/choose1.30320ad49d85f3fa0bc2.png",
@@ -51,11 +51,11 @@
     "static/media/plus.svg": "/portclone/static/media/plus.db6a1b393f18fab9302cffaee47df564.svg",
     "static/media/minus.svg": "/portclone/static/media/minus.f10dfa5925f40ad8541e58447745c65c.svg",
     "static/media/pre3.svg": "/portclone/static/media/pre3.0e6ad22e47650e7e0a8830026652ea55.svg",
-    "main.265b7446.css.map": "/portclone/static/css/main.265b7446.css.map",
-    "main.5fb02c32.js.map": "/portclone/static/js/main.5fb02c32.js.map"
+    "main.14514d49.css.map": "/portclone/static/css/main.14514d49.css.map",
+    "main.40d9b1a7.js.map": "/portclone/static/js/main.40d9b1a7.js.map"
   },
   "entrypoints": [
-    "static/css/main.265b7446.css",
-    "static/js/main.5fb02c32.js"
+    "static/css/main.14514d49.css",
+    "static/js/main.40d9b1a7.js"
   ]
 }
