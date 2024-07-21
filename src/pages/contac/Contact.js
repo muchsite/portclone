@@ -1,5 +1,6 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./contact.scss";
+import axios from "axios";
 const Contact = () => {
   useEffect(() => {
     const scroll = () => {
@@ -7,13 +8,59 @@ const Contact = () => {
     };
     scroll();
   }, []);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [number, setNnumber] = useState("");
+  const [message, setMessage] = useState("");
+  const [sending, setSending] = useState("");
+  const [sent, setSent] = useState("");
+  const serviceID = process.env.REACT_APP_SERVICE_ID;
+  const templateID = process.env.REACT_APP_TEMPLATE;
+  const userID = process.env.REACT_APP_PYBLIC;
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const data = {
+      service_id: serviceID,
+      template_id: templateID,
+      user_id: userID,
+      template_params: {
+        name,
+        email,
+        number,
+        message,
+      },
+    };
+    const headers = { "Content-Type": "application/json" };
+    setSending(true);
+    setSent(false);
+    try {
+      const response = await axios.post(
+        "https://api.emailjs.com/api/v1.0/email/send",
+        data,
+        { headers }
+      );
+      setSending(false);
+      setEmail("");
+      setMessage("");
+      setName("");
+      setNnumber("");
+      setSent(true);
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <div>
       <div className="contact_text">
         <div className="b_blur"></div>
-        <h1>Welcome to [Your Business Name] Website</h1>
-        <p>Explore our offerings and discover how we can help you succeed.</p>
-        <button>Explore Now</button>
+        <h1>Welcome to Scared2Compile!</h1>
+        <p>
+          If you have any questions, or feedback, or need support, please don't
+          hesitate to reach out to us. Fill out the form below and our team will
+          get back to you as soon as possible.
+        </p>
+        <button>Contact Us</button>
       </div>
       <div className="contact_form">
         <div className="contact_form_title">
@@ -24,20 +71,55 @@ const Contact = () => {
             and feedback directly through the website.
           </p>
         </div>
-        <form>
+        <form onSubmit={handleSubmit}>
           <div className="form_div">
             <label htmlFor="">Name</label>
-            <input type="text" placeholder="Enter your name" />
+            <input
+              type="text"
+              name="name"
+              required
+              value={name}
+              onChange={(e) => setName(e.currentTarget.value)}
+              placeholder="Enter your name"
+            />
           </div>
           <div className="form_div">
             <label htmlFor="">Email</label>
-            <input type="text" placeholder="Enter your email" />
+            <input
+              type="email"
+              name="email"
+              required
+              value={email}
+              onChange={(e) => setEmail(e.currentTarget.value)}
+              placeholder="Enter your email"
+            />
+          </div>
+          <div className="form_div">
+            <label htmlFor="">Number (optional)</label>
+            <input
+              type="text"
+              name="subject"
+              value={number}
+              onChange={(e) => setNnumber(e.currentTarget.value)}
+              placeholder="Enter your number"
+            />
           </div>
           <div className="form_div">
             <label htmlFor="">Message</label>
-            <input type="text" placeholder="Enter your message" />
+            <input
+              type="text"
+              name="message"
+              value={message}
+              required
+              onChange={(e) => setMessage(e.currentTarget.value)}
+              placeholder="Enter your message"
+            />
           </div>
-          <button>Submit</button>
+          <div className="loading_btn">
+            <button type="submit">Submit</button>
+            {sending ? <div className="loading"></div> : <></>}
+            {sent ? <p>Message has been sent!</p> : <></>}
+          </div>
         </form>
       </div>
     </div>

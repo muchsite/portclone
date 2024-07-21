@@ -11,7 +11,7 @@
   background-position: center;
   position: relative;
   h1 {
-    color: var(--text);
+    color: #fff;
     font-size: 40px;
     width: 80%;
     text-align: center;
@@ -23,7 +23,7 @@
     }
   }
   p {
-    color: var(--g-color);
+    color: #fff;
     font-size: 20px;
     width: 50%;
     text-align: center;
@@ -37,7 +37,7 @@
   button {
     background-color: var(--btn);
     border: none;
-    color: var(--text);
+    color: #fff;
     padding: 12px 20px;
     border-radius: 20px;
     cursor: pointer;
@@ -125,10 +125,43 @@
       padding: 12px 20px;
       border-radius: 20px;
       cursor: pointer;
-      margin-top: 1rem;
       box-shadow: 0 10px 20px -10px var(--btn-shadow);
       font-weight: 400;
       width: fit-content;
     }
+  }
+}
+
+.loading_btn {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+  gap: 2rem;
+  p {
+    color: var(--text);
+  }
+}
+.loading {
+  height: 30px;
+  width: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: progress;
+  border-radius: 50%;
+  border-top: 5px solid gold;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid gold;
+  border-right: 5px solid transparent;
+  animation: loading 1s linear infinite;
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
