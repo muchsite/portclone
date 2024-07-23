@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import "./port.scss";
-import f from "../../../images/airtable-white.svg";
-import s from "../../../images/make-white.svg";
-import t from "../../../images/notion-white.svg";
-import fo from "../../../images/typedream-white.svg";
-import th from "../../../images/zapier-white.svg";
+import f from "../../../images/G.72e08d2321ed15dd41385985dbb8f145.svg";
+import s from "../../../images/Picsart.svg";
+import t from "../../../images/South-Side-Logo-01.png";
+import fo from "../../../images/Maharaja-Logo-(2)(1).png";
+
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { Link } from "react-router-dom";
@@ -29,12 +29,18 @@ const Port = () => {
         </Link>
       </div>
       <div className="port_r" data-aos="fade-up">
-        <img src={f} alt="" />
-        <img src={s} alt="" />
-        <img src={t} alt="" />
-        <img src={fo} alt="" />
-        <img src={th} alt="" />
-        <img src={f} alt="" />
+        <div className="port_r_div">
+          <img src={f} alt="" />
+        </div>
+        <div className="port_r_div">
+          <img src={s} alt="" />
+        </div>
+        <div className="port_r_div">
+          <img src={t} alt="" />
+        </div>
+        <div className="port_r_div">
+          <img src={fo} alt="" />
+        </div>
       </div>
     </div>
   );

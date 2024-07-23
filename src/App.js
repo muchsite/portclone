@@ -7,9 +7,14 @@ import "aos/dist/aos.css";
 import { BrowserRouter, Route, Routes, HashRouter } from "react-router-dom";
 import Footer from "./components/footer/Footer";
 import Contact from "./pages/contac/Contact";
-import About from "./pages/about/About";
+
 import Portfolio from "./pages/portfolio/Portfolio";
 import Nav from "./components/Nav/Nav";
+import Faq from "./pages/faq/Faq";
+import Terms from "./pages/t/Terms";
+import Refund from "./pages/t/Refund";
+import Privacy from "./pages/t/Privacy";
+
 const App = () => {
   const [theme, setTheme] = useState("dark");
   const handleTogle = () => {
@@ -27,8 +32,11 @@ const App = () => {
           <Routes>
             <Route element={<Home />} path="/" />
             <Route element={<Contact />} path="/contact" />
-            <Route element={<About />} path="/about" />
+            <Route element={<Faq />} path="/faq" />
             <Route element={<Portfolio />} path="/portfolio" />
+            <Route element={<Terms />} path="/terms" />
+            <Route element={<Refund />} path="/refund" />
+            <Route element={<Privacy />} path="/privacy" />
           </Routes>
           <Footer />
         </HashRouter>

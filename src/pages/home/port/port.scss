@@ -42,8 +42,12 @@
   }
   .port_r {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 4rem;
+    .port_r_div {
+      display: flex;
+      justify-content: center;
+    }
     @include breack_down(large) {
       display: flex;
       flex-direction: column;
@@ -51,10 +55,11 @@
       justify-content: center;
     }
     img {
-      width: 8vw;
+      // width: 8vw;
+      height: 5rem !important;
       height: fit-content;
       @include breack_down(large) {
-        width: 50%;
+        // width: 50%;
       }
     }
   }

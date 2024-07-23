@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./faq.scss";
-import plus from "../../../images/plus.svg";
-import minus from "../../../images/minus.svg";
+import plus from "../../images/plus.svg";
+import minus from "../../images/minus.svg";
 const Faq = () => {
   const arr = [
     {

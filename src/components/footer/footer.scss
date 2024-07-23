@@ -37,16 +37,20 @@
       }
     }
     .footer_top_right {
-      width: 30%;
-      @include breack_down(large) {
-        width: fit-content;
-      }
-      h3 {
+      display: flex;
+      gap: 1rem;
+      a {
+        text-decoration: none;
         color: var(--text);
-        margin-bottom: 1rem;
+        &:hover {
+          color: var(--btn);
+        }
       }
-      p {
-        color: var(--g-color);
+      .active {
+        color: var(--btn);
+      }
+      .pending {
+        color: var(--text);
       }
     }
   }

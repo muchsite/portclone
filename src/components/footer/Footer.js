@@ -1,6 +1,6 @@
 import React from "react";
 import logo from "../../images/footerLogo.png";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "./footer.scss";
 const Footer = () => {
   return (
@@ -10,12 +10,30 @@ const Footer = () => {
           <img src={logo} alt="" />
         </div>
         <div className="footer_top_right">
-          <h3>About us</h3>
-          <p>
-            Stay connected with us through our social media channels and never
-            miss an update. Reach out via email or phone for any inquiries.
-            We’re here to help your business succeed online.
-          </p>
+          <NavLink
+            className={({ isActive, isPending }) =>
+              isPending ? "pending" : isActive ? "active" : ""
+            }
+            to="/terms"
+          >
+            Terms And Conditions
+          </NavLink>
+          <NavLink
+            className={({ isActive, isPending }) =>
+              isPending ? "pending" : isActive ? "active" : ""
+            }
+            to="/privacy"
+          >
+            Privacy Policy
+          </NavLink>
+          <NavLink
+            className={({ isActive, isPending }) =>
+              isPending ? "pending" : isActive ? "active" : ""
+            }
+            to="/refund"
+          >
+            Refund Policy
+          </NavLink>
         </div>
       </div>
       <div className="footer_bottom">

@@ -153,6 +153,7 @@
     display: flex;
     margin-top: 3rem;
     gap: 2rem;
+    justify-content: space-between;
     @include breack_down(large) {
       flex-direction: column;
     }
@@ -185,27 +186,26 @@
           justify-content: center;
           flex-shrink: 0;
         }
-        .active_h {
-          color: var(--btn);
-          outline: 2px solid var(--btn);
-        }
         p {
           color: var(--g-color);
         }
       }
     }
-  }
-  .highlite_body_2 {
-    flex-direction: row-reverse;
-    @include breack_down(large) {
-      flex-direction: column-reverse;
-    }
-    .h2_image {
-      border-radius: 20px;
-      @include breack_down(large) {
+    .slider_container {
+      width: 60%;
+      img {
         width: 100%;
+        border-radius: 20px;
+      }
+      button {
+        &::before {
+          color: var(--btn);
+        }
       }
     }
+  }
+  .hb_reverse {
+    flex-direction: row-reverse;
   }
 }
 .colab {

@@ -19,25 +19,25 @@ const Nav = ({ theme, handleTogle }) => {
           className={({ isActive, isPending }) =>
             isPending ? "pending" : isActive ? "active" : ""
           }
-          to="/contact"
-        >
-          Contact
-        </NavLink>
-        <NavLink
-          className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "active" : ""
-          }
-          to="/about"
-        >
-          About
-        </NavLink>
-        <NavLink
-          className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "active" : ""
-          }
           to="/portfolio"
         >
           Portfolio
+        </NavLink>
+        <NavLink
+          className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "active" : ""
+          }
+          to="/faq"
+        >
+          F.A,Q
+        </NavLink>
+        <NavLink
+          className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "active" : ""
+          }
+          to="/contact"
+        >
+          Contact
         </NavLink>
       </div>
       <div className="theme_btn" onClick={handleTogle}>
