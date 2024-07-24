@@ -4,7 +4,7 @@ import { Link, NavLink } from "react-router-dom";
 import "./footer.scss";
 const Footer = () => {
   return (
-    <div className="footer_container">
+    <footer className="footer_container">
       <div className="footer_top">
         <div className="footer_top_left">
           <img src={logo} alt="" />
@@ -39,7 +39,7 @@ const Footer = () => {
       <div className="footer_bottom">
         <p>© 2024 Scared2compile All rights reserved</p>
       </div>
-    </div>
+    </footer>
   );
 };
 

@@ -29,16 +29,18 @@ const App = () => {
       <main>
         <HashRouter>
           <Nav handleTogle={handleTogle} theme={theme} setTheme={setTheme} />
-          <Routes>
-            <Route element={<Home />} path="/" />
-            <Route element={<Contact />} path="/contact" />
-            <Route element={<Faq />} path="/faq" />
-            <Route element={<Portfolio />} path="/portfolio" />
-            <Route element={<Terms />} path="/terms" />
-            <Route element={<Refund />} path="/refund" />
-            <Route element={<Privacy />} path="/privacy" />
-          </Routes>
-          <Footer />
+          <main>
+            <Routes>
+              <Route element={<Home />} path="/" />
+              <Route element={<Contact />} path="/contact" />
+              <Route element={<Faq />} path="/faq" />
+              <Route element={<Portfolio />} path="/portfolio" />
+              <Route element={<Terms />} path="/terms" />
+              <Route element={<Refund />} path="/refund" />
+              <Route element={<Privacy />} path="/privacy" />
+            </Routes>
+            <Footer />
+          </main>
         </HashRouter>
       </main>
     </div>

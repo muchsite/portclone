@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./contact.scss";
 import axios from "axios";
 const Contact = () => {
@@ -50,6 +50,13 @@ const Contact = () => {
       console.log(error);
     }
   };
+  const myElementRef = useRef(null);
+
+  const scrollToElement = () => {
+    if (myElementRef.current) {
+      myElementRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <div>
       <div className="contact_text">
@@ -60,9 +67,9 @@ const Contact = () => {
           hesitate to reach out to us. Fill out the form below and our team will
           get back to you as soon as possible.
         </p>
-        <button>Contact Us</button>
+        <button onClick={scrollToElement}>Contact Us</button>
       </div>
-      <div className="contact_form">
+      <div className="contact_form" ref={myElementRef}>
         <div className="contact_form_title">
           <h2>Contact Us</h2>
           <p>

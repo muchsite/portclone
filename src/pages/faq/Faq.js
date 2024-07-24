@@ -1,8 +1,14 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./faq.scss";
 import plus from "../../images/plus.svg";
 import minus from "../../images/minus.svg";
 const Faq = () => {
+  useEffect(() => {
+    const scroll = () => {
+      window.scrollTo(0, 0);
+    };
+    scroll();
+  }, []);
   const arr = [
     {
       q: "What is the typical timeline for developing a website?",

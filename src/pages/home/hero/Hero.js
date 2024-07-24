@@ -7,7 +7,7 @@ import fo from "../../../images/homeF3b.png";
 import fi from "../../../images/homeF4.png";
 import si from "../../../images/homeF5.png";
 import b from "../../../images/hb.svg";
-const Hero = () => {
+const Hero = ({ scrollToElement }) => {
   return (
     <div className="h_c">
       <div className="hero_container">
@@ -22,7 +22,9 @@ const Hero = () => {
           development, SEO optimization, and post-launch support ensure your
           business stands out online.
         </p>
-        <button data-aos="fade-up">Learn More</button>
+        <button data-aos="fade-up" onClick={scrollToElement}>
+          Learn More
+        </button>
       </div>
       <div className="hero_imgages_container">
         <div className="hero_images">

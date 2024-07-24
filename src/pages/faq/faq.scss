@@ -6,7 +6,7 @@
   padding: 5rem 4rem;
   align-items: center;
   @include breack_down(large) {
-    padding: 2rem;
+    padding: 5rem 2rem 2rem 2rem;
   }
   .faq_title {
     display: flex;

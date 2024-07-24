@@ -1,6 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./terms.scss";
 const Privacy = () => {
+  useEffect(() => {
+    const scroll = () => {
+      window.scrollTo(0, 0);
+    };
+    scroll();
+  }, []);
   return (
     <div className="terms_contanier">
       <h2>Privacy Policy</h2>

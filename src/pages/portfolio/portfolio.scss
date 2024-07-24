@@ -63,12 +63,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  @include breack_down(large) {
+    margin-top: 2rem;
+    margin-bottom: 0;
+  }
   .port_benefits_title {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
     margin-bottom: 3rem;
+    @include breack_down(large) {
+      margin-bottom: 0;
+    }
     h3 {
       color: var(--btn);
     }
@@ -193,6 +200,9 @@
     }
     .slider_container {
       width: 60%;
+      @include breack_down(large) {
+        width: 100%;
+      }
       img {
         width: 100%;
         border-radius: 20px;
@@ -206,6 +216,24 @@
   }
   .hb_reverse {
     flex-direction: row-reverse;
+    @include breack_down(large) {
+      flex-direction: column;
+    }
+  }
+}
+.port_logo {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  @include breack_down(large) {
+    justify-content: space-between;
+  }
+  img {
+    cursor: pointer;
+    width: 5rem !important;
+    &:hover {
+      scale: 1.06;
+    }
   }
 }
 .colab {
@@ -274,5 +302,15 @@
       width: fit-content;
       text-decoration: none;
     }
+  }
+}
+.slider_container_maharaja_desktop {
+  @include breack_down(large) {
+    display: none !important;
+  }
+}
+.slider_container_maharaja_mobile {
+  @include breack_up(small) {
+    display: none !important;
   }
 }

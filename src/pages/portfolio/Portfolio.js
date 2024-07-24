@@ -1,10 +1,14 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import por from "../../images/portfolioBack.jpeg";
 import por2 from "../../images/hb.svg";
 import ci from "../../images/contacticon.svg";
 import m1 from "../../images/maharaja/desktop/m1.png";
 import m2 from "../../images/maharaja/desktop/m2.png";
 import m3 from "../../images/maharaja/desktop/m3.png";
+import mm1 from "../../images/maharaja/mobel/m1.png";
+import mm2 from "../../images/maharaja/mobel/m2.png";
+import mm3 from "../../images/maharaja/mobel/m3.png";
+import mm4 from "../../images/maharaja/mobel/m4.png";
 import g1 from "../../images/GrowingSeed/g2.png";
 import g2 from "../../images/GrowingSeed/g3.png";
 import g3 from "../../images/GrowingSeed/g4.png";
@@ -13,6 +17,9 @@ import t1 from "../../images/tradeflare/t1.png";
 import t2 from "../../images/tradeflare/t2.png";
 import t3 from "../../images/tradeflare/t3.png";
 import t4 from "../../images/tradeflare/t4.png";
+import mLogo from "../../images/Maharaja-Logo-(2)(1).png";
+import gLogo from "../../images/G.72e08d2321ed15dd41385985dbb8f145.svg";
+import tLogo from "../../images/tLogo.svg";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -28,10 +35,21 @@ const Portfolio = () => {
   }, []);
   const settings = {
     dots: true,
-    infinite: true,
+    infinite: false,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+  };
+  const gArr = [g1, g2, g3, g4];
+  const mArr = [m1, m2, m3];
+  const mmArr = [mm1, mm2, mm3, mm4];
+  const tArr = [t1, t2, t3, t4];
+  const myElementRef = useRef(null);
+
+  const scrollToElement = () => {
+    if (myElementRef.current) {
+      myElementRef.current.scrollIntoView({ behavior: "smooth" });
+    }
   };
   return (
     <div className="portfolio_container">
@@ -41,12 +59,12 @@ const Portfolio = () => {
           <img src={por2} alt="" className="port_back _top" />
         </div>
         <div className="portfolio_text">
-          <h1>Portfolio Showcase</h1>
+          <h1>Featured Projects</h1>
           <p>
-            Highlighting skills, expertise, and a variety of completed projects
-            to captivate visitors and encourage exploration.
+            See how we create user-friendly, SEO-optimized websites that drive
+            business growth.
           </p>
-          <button>Explore More</button>
+          <button onClick={scrollToElement}>Explore More</button>
         </div>
       </div>
       <div className="port_benefits">
@@ -54,12 +72,21 @@ const Portfolio = () => {
           <h3>Portfolio</h3>
         </div>
       </div>
-      <div className="highlight">
+      <div className="highlight" ref={myElementRef}>
         <div className="highlite_body">
           <div className="h_left">
             <div className="h_title">
               <h3>Feature Highlight</h3>
-              <h2>Feature Highlight</h2>
+              <div className="port_logo">
+                <h2>Maharaja</h2>
+                <a
+                  href="https://maharajamoldedfurniture.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src={mLogo} alt="" />
+                </a>
+              </div>
               <p>Website for the India’s No. Chairs Company</p>
             </div>
             <div className="h_left_div">
@@ -81,17 +108,26 @@ const Portfolio = () => {
               </div>
             </div>
           </div>
-          <div className="slider_container">
+          <div className="slider_container slider_container_maharaja_desktop">
             <Slider {...settings}>
-              <div>
-                <img src={m1} alt="" />
-              </div>
-              <div>
-                <img src={m2} alt="" />
-              </div>
-              <div>
-                <img src={m3} alt="" />
-              </div>
+              {mArr.map((item, index) => {
+                return (
+                  <div>
+                    <img src={item} alt="" />
+                  </div>
+                );
+              })}
+            </Slider>
+          </div>
+          <div className="slider_container slider_container_maharaja_mobile">
+            <Slider {...settings}>
+              {mmArr.map((item, index) => {
+                return (
+                  <div>
+                    <img src={item} alt="" />
+                  </div>
+                );
+              })}
             </Slider>
           </div>
         </div>
@@ -101,7 +137,16 @@ const Portfolio = () => {
           <div className="h_left">
             <div className="h_title">
               <h3>Feature Highlight</h3>
-              <h2>GrowingSeed</h2>
+              <div className="port_logo">
+                <h2>GrowingSeed</h2>
+                <a
+                  href="https://growingseedtech.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src={gLogo} alt="" />
+                </a>
+              </div>
               <p>Website for an online courses & consultant company</p>
             </div>
             <div className="h_left_div">
@@ -125,18 +170,13 @@ const Portfolio = () => {
           </div>
           <div className="slider_container">
             <Slider {...settings}>
-              <div>
-                <img src={g1} alt="" />
-              </div>
-              <div>
-                <img src={g2} alt="" />
-              </div>
-              <div>
-                <img src={g3} alt="" />
-              </div>
-              <div>
-                <img src={g4} alt="" />
-              </div>
+              {gArr.map((item, index) => {
+                return (
+                  <div>
+                    <img src={item} alt="" />
+                  </div>
+                );
+              })}
             </Slider>
           </div>
         </div>
@@ -146,7 +186,16 @@ const Portfolio = () => {
           <div className="h_left">
             <div className="h_title">
               <h3>Feature Highlight</h3>
-              <h2>Tradeflair</h2>
+              <div className="port_logo">
+                <h2>Tradeflair</h2>
+                <a
+                  href="https://muchsite.github.io/tradeclone/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src={tLogo} alt="" />
+                </a>
+              </div>
               <p>Website for a fintech company</p>
             </div>
             <div className="h_left_div">
@@ -170,18 +219,13 @@ const Portfolio = () => {
           </div>
           <div className="slider_container">
             <Slider {...settings}>
-              <div>
-                <img src={t1} alt="" />
-              </div>
-              <div>
-                <img src={t2} alt="" />
-              </div>
-              <div>
-                <img src={t3} alt="" />
-              </div>
-              <div>
-                <img src={t4} alt="" />
-              </div>
+              {tArr.map((item, index) => {
+                return (
+                  <div>
+                    <img src={item} alt="" />
+                  </div>
+                );
+              })}
             </Slider>
           </div>
         </div>

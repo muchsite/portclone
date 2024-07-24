@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./terms.scss";
 
 const Terms = () => {
+  useEffect(() => {
+    const scroll = () => {
+      window.scrollTo(0, 0);
+    };
+    scroll();
+  }, []);
   return (
     <div className="terms_contanier">
       <h3>Terms & Conditions</h3>

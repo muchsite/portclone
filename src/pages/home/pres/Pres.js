@@ -6,7 +6,7 @@ import fo from "../../../images/pre4.svg";
 import fi from "../../../images/pre5.svg";
 import si from "../../../images/pre6.svg";
 import "./pres.scss";
-const Pres = () => {
+const Pres = ({ myElementRef }) => {
   const arr = [
     {
       img: f,
@@ -40,7 +40,7 @@ const Pres = () => {
     },
   ];
   return (
-    <div className="pre_container">
+    <div className="pre_container" ref={myElementRef}>
       <div className="pre_text" data-aos="fade-up">
         <h3>Website Development</h3>
         <h2>Elevate Online Presence</h2>
