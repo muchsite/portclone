@@ -72,7 +72,7 @@
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
     @include breack_down(large) {
       margin-bottom: 0;
     }

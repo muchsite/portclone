@@ -1,6 +1,7 @@
-@use "../../mix.scss" as *;
+@use "../../../mix.scss" as *;
 .about_container {
   padding: 0rem 2rem;
+  margin-top: 4rem;
   .about_hero_container {
     display: flex;
     align-items: center;
@@ -46,7 +47,7 @@
     .about_show_title {
       text-align: center;
       width: 70%;
-      margin-bottom: 3rem;
+      margin-bottom: 1rem;
       @include breack_down(large) {
         width: 90%;
       }
@@ -73,8 +74,14 @@
       }
       .about_div {
         width: 30vw;
+        cursor: pointer;
         @include breack_down(large) {
           width: 90vw;
+        }
+        @include breack_up(small) {
+          &:hover {
+            scale: 1.05;
+          }
         }
         img {
           width: 100%;

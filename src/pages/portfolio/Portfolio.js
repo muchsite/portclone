@@ -26,6 +26,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 import "./portfolio.scss";
 import { Link } from "react-router-dom";
+import Galery from "./about/Galery";
 const Portfolio = () => {
   useEffect(() => {
     const scroll = () => {
@@ -112,7 +113,7 @@ const Portfolio = () => {
             <Slider {...settings}>
               {mArr.map((item, index) => {
                 return (
-                  <div>
+                  <div key={index}>
                     <img src={item} alt="" />
                   </div>
                 );
@@ -123,7 +124,7 @@ const Portfolio = () => {
             <Slider {...settings}>
               {mmArr.map((item, index) => {
                 return (
-                  <div>
+                  <div key={index}>
                     <img src={item} alt="" />
                   </div>
                 );
@@ -172,7 +173,7 @@ const Portfolio = () => {
             <Slider {...settings}>
               {gArr.map((item, index) => {
                 return (
-                  <div>
+                  <div key={index}>
                     <img src={item} alt="" />
                   </div>
                 );
@@ -221,7 +222,7 @@ const Portfolio = () => {
             <Slider {...settings}>
               {tArr.map((item, index) => {
                 return (
-                  <div>
+                  <div key={index}>
                     <img src={item} alt="" />
                   </div>
                 );
@@ -230,6 +231,7 @@ const Portfolio = () => {
           </div>
         </div>
       </div>
+      <Galery />
       <div className="colab">
         <div className="colab_bottom">
           <img src={ci} alt="" />

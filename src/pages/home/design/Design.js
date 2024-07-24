@@ -37,7 +37,7 @@ const Design = () => {
         <div className="design_divs">
           {arr.map((item, index) => {
             return (
-              <div className="design_div">
+              <div className="design_div" key={index}>
                 <img src={item.img} alt="" />
                 <p>{item.text}</p>
               </div>

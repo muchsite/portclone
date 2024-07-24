@@ -34,7 +34,7 @@ const Nav = ({ theme, handleTogle }) => {
           }
           to="/faq"
         >
-          F.A,Q
+          FAQ's
         </NavLink>
         <NavLink
           className={({ isActive, isPending }) =>
