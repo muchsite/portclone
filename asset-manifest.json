@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portclone/static/css/main.85a2c3ab.css",
-    "main.js": "/portclone/static/js/main.18fdc6fe.js",
+    "main.css": "/portclone/static/css/main.7e200db2.css",
+    "main.js": "/portclone/static/js/main.bfdac6c3.js",
     "static/media/Kato.jpeg": "/portclone/static/media/Kato.219ae9ec012d564ec1f6.jpeg",
     "static/media/g1.png": "/portclone/static/media/g1.a7ee52903c9b394431bf.png",
     "static/media/g4.png": "/portclone/static/media/g4.8b814a0bccbc43677523.png",
@@ -28,6 +28,8 @@
     "static/media/vaidehee.jpg": "/portclone/static/media/vaidehee.94b9fe77c6a71c284126.jpg",
     "static/media/homeF3a.png": "/portclone/static/media/homeF3a.e9d6fdad3d87d48a16b1.png",
     "static/media/m4.png": "/portclone/static/media/m4.db51d19b3eef11c42add.png",
+    "static/media/logo11.svg": "/portclone/static/media/logo11.9dca34484be25297ec57368eed73b94a.svg",
+    "static/media/logo1.svg": "/portclone/static/media/logo1.ecc407262bab131d3641326c8b308d15.svg",
     "static/media/choose3.png": "/portclone/static/media/choose3.9c65b556940fac124a94.png",
     "static/media/choose4.png": "/portclone/static/media/choose4.4e935f40a4ac6b606fb1.png",
     "static/media/G.svg": "/portclone/static/media/G.72e08d2321ed15dd41385985dbb8f145.72e08d2321ed15dd41385985dbb8f145.svg",
@@ -38,6 +40,8 @@
     "static/media/Maharaja-Logo-(2)(1).png": "/portclone/static/media/Maharaja-Logo-(2)(1).206d7acc4c35348b1f76.png",
     "static/media/mahesh.jpg": "/portclone/static/media/mahesh.348e471ad970fab066ec.jpg",
     "static/media/tLogo.svg": "/portclone/static/media/tLogo.7807ab3c6cd428d58108900fe709e857.svg",
+    "static/media/insta.svg": "/portclone/static/media/insta.a0a9a83448ddb5827d70493a84d37806.svg",
+    "static/media/whatsapp.svg": "/portclone/static/media/whatsapp.29f12f4e4fb4ee8b9858a32009cd684e.svg",
     "static/media/hb.svg": "/portclone/static/media/hb.513cf25d04d4ca975d035d152a015976.svg",
     "static/media/slick.svg": "/portclone/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/portclone/static/media/slick.a4e97f5a2a64f0ab1323.eot",
@@ -57,11 +61,11 @@
     "static/media/plus.svg": "/portclone/static/media/plus.db6a1b393f18fab9302cffaee47df564.svg",
     "static/media/minus.svg": "/portclone/static/media/minus.f10dfa5925f40ad8541e58447745c65c.svg",
     "static/media/pre3.svg": "/portclone/static/media/pre3.0e6ad22e47650e7e0a8830026652ea55.svg",
-    "main.85a2c3ab.css.map": "/portclone/static/css/main.85a2c3ab.css.map",
-    "main.18fdc6fe.js.map": "/portclone/static/js/main.18fdc6fe.js.map"
+    "main.7e200db2.css.map": "/portclone/static/css/main.7e200db2.css.map",
+    "main.bfdac6c3.js.map": "/portclone/static/js/main.bfdac6c3.js.map"
   },
   "entrypoints": [
-    "static/css/main.85a2c3ab.css",
-    "static/js/main.18fdc6fe.js"
+    "static/css/main.7e200db2.css",
+    "static/js/main.bfdac6c3.js"
   ]
 }
