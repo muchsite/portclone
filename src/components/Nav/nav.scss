@@ -22,7 +22,11 @@
     padding: 0.5rem 1rem;
   }
   .nav_logo {
-    width: 7rem;
+    width: 10rem;
+    border-radius: 10px;
+    @include breack_down(large) {
+      width: 7rem;
+    }
   }
   .nav_links_desk {
     display: flex;
@@ -145,4 +149,18 @@
   -ms-transform: translateY(-7px) rotate(-45deg);
   -o-transform: translateY(-7px) rotate(-45deg);
   transform: translateY(-7px) rotate(-45deg);
+}
+
+.wa {
+  position: fixed;
+  z-index: 100;
+  bottom: 2rem;
+  right: 2rem;
+  cursor: pointer;
+  &:hover {
+    scale: 1.08;
+  }
+  img {
+    width: 4rem;
+  }
 }
